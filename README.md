@@ -18,7 +18,7 @@ The matrix provides a structured lookup table that maps:
 
 ### Coverage
 
-The matrix covers 40+ problem scenarios including:
+The matrix covers 38+ problem scenarios including:
 - Vision and strategy alignment
 - Stakeholder management
 - Requirements elicitation and clarity

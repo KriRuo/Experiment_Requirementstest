@@ -5,7 +5,45 @@
 This repository contains comprehensive resources for Business Analysts and Requirements Engineers:
 
 📊 **[BA Methods Matrix](BA_Methods_Matrix.md)** - Problem-to-method lookup guide  
-🤖 **[AI-Enabled BA Deliverables Catalog](AI_Enabled_BA_Deliverables_Catalog.md)** - Deliverables with AI acceleration techniques
+🤖 **[AI-Enabled BA Deliverables Catalog](AI_Enabled_BA_Deliverables_Catalog.md)** - Deliverables with AI acceleration techniques  
+📋 **[BA Context Block Schema 1.0](ba-context-block-schema-v1.0.json)** - Universal JSON schema for BA deliverables
+
+---
+
+## BA Context Block Schema 1.0
+
+The **BA Context Block Schema 1.0** provides a standardized, universal format for any BA deliverable.
+
+📋 **[View the JSON Schema](ba-context-block-schema-v1.0.json)** | **[View Example](ba-context-block-example.json)**
+
+### What's Inside
+
+A simple and minimal JSON schema that defines a universal structure for BA deliverables including:
+
+- **Metadata** - Core identification (id, type, title, owner, status, version, date)
+- **Purpose** - Why it exists (problemSolved, objective)
+- **Content** - The actual deliverable (structuredContent, keyDecisions, assumptions, risks)
+- **Relations** - Traceability links (informs, dependsOn, conflictsWith)
+- **Quality** - Validation criteria (acceptanceCriteria, reviewChecklist)
+- **AI** - AI prompts (generationPrompt, validationPrompt)
+
+### Key Features
+
+✅ Works for any BA deliverable type (vision, process, requirements, risks, use cases, etc.)  
+✅ Human-readable and easy to understand  
+✅ Deterministic for AI processing and automation  
+✅ Supports full traceability between blocks  
+✅ Under 40 total fields (33 fields)  
+✅ Clear descriptions for all fields  
+✅ No optional complexity (no inheritance, no advanced refs)
+
+### Use Cases
+
+- **Universal Storage Format** - Store any BA deliverable in a consistent structure
+- **Traceability Management** - Track dependencies and relationships between deliverables
+- **AI-Powered Generation** - Use stored prompts to regenerate or update deliverables
+- **Quality Validation** - Automated checking against acceptance criteria and checklists
+- **Tool Integration** - Standard format for BA tool interoperability
 
 ---
 

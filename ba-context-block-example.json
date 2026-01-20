@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "id": "VIS-001",
+    "type": "vision",
+    "title": "Customer Portal Vision",
+    "owner": "Jane Smith, Lead BA",
+    "status": "approved",
+    "version": "2.0",
+    "date": "2026-01-19T10:30:00Z"
+  },
+  "purpose": {
+    "problemSolved": "Customers cannot self-serve account information and must call support, resulting in high support costs and customer frustration",
+    "objective": "Enable 80% of customer inquiries to be self-served through an intuitive web portal, reducing support calls by 60% within 6 months"
+  },
+  "content": {
+    "structuredContent": {
+      "targetGroup": "Existing customers with active accounts",
+      "coreNeeds": [
+        "View account balance and history",
+        "Update contact information",
+        "Download invoices and statements",
+        "Submit support requests"
+      ],
+      "proposedSolution": "Responsive web portal with secure authentication, integrated with existing CRM and billing systems",
+      "businessGoals": [
+        "Reduce support call volume by 60%",
+        "Improve customer satisfaction score from 3.2 to 4.5",
+        "Achieve 10,000 active portal users in first quarter"
+      ],
+      "successMetrics": [
+        "Portal adoption rate > 70%",
+        "Support ticket reduction > 50%",
+        "Customer satisfaction score > 4.0",
+        "Portal uptime > 99.5%",
+        "Average page load time < 2 seconds"
+      ]
+    },
+    "keyDecisions": [
+      {
+        "decision": "Build responsive web portal rather than native mobile apps",
+        "rationale": "Web portal provides cross-platform access with lower development and maintenance costs. Analytics show 85% of customer access would be via desktop or mobile browser",
+        "date": "2026-01-10"
+      },
+      {
+        "decision": "Integrate with existing CRM rather than build separate customer database",
+        "rationale": "Maintains single source of truth, reduces data synchronization complexity, leverages existing security controls",
+        "date": "2026-01-12"
+      }
+    ],
+    "assumptions": [
+      "Customers have basic internet literacy",
+      "Existing CRM APIs can support required read/write operations",
+      "Infrastructure team can provision necessary hosting environment",
+      "Customer support team will promote portal adoption"
+    ],
+    "risks": [
+      {
+        "description": "Low customer adoption if portal is not intuitive",
+        "impact": "high",
+        "probability": "medium",
+        "mitigation": "Conduct usability testing with representative customers, implement progressive disclosure, provide contextual help"
+      },
+      {
+        "description": "CRM integration performance issues under load",
+        "impact": "critical",
+        "probability": "medium",
+        "mitigation": "Implement caching layer, conduct load testing early, establish SLAs with CRM vendor"
+      }
+    ]
+  },
+  "relations": {
+    "informs": [
+      "REQ-Portal-001",
+      "REQ-Portal-002",
+      "ARCH-Portal-001",
+      "TEST-Portal-001"
+    ],
+    "dependsOn": [
+      "STRATEGY-2026",
+      "STAKEHOLDER-MAP-001"
+    ],
+    "conflictsWith": []
+  },
+  "quality": {
+    "acceptanceCriteria": [
+      "Vision fits on one page",
+      "Target group clearly defined with demographics",
+      "All business goals are SMART (Specific, Measurable, Achievable, Relevant, Time-bound)",
+      "Validated and approved by executive sponsor",
+      "All success metrics have baseline values and targets"
+    ],
+    "reviewChecklist": [
+      "Understandable by non-technical stakeholders in under 2 minutes",
+      "Aligned with company strategy and existing initiatives",
+      "All stakeholder concerns addressed or documented",
+      "Scope boundaries are clear (what's in and out)",
+      "Technical feasibility confirmed by architects"
+    ]
+  },
+  "ai": {
+    "generationPrompt": "Given interview transcripts with executive sponsor, customer support manager, and 5 customers discussing pain points with current customer service model, synthesize a Vision Canvas including: target group characteristics, their top 3 problems, proposed solution approach, 3 measurable business goals with targets, and 5 specific success metrics with baselines and targets. Use practitioner language and ensure all metrics are measurable.",
+    "validationPrompt": "Review this Vision Canvas against BABOK best practices and check for: 1) Are problems and solution clearly aligned? 2) Are all goals SMART? 3) Is scope realistic for 6-month timeline? 4) Are key stakeholder perspectives represented? 5) Are success metrics actually measurable? 6) Are assumptions and risks adequately captured? Provide specific gap analysis and improvement recommendations."
+  }
+}

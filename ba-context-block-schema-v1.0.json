@@ -1,0 +1,201 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/KriRuo/Experiment_Requirementstest/ba-context-block-schema-v1.0.json",
+  "title": "BA Context Block 1.0",
+  "description": "Universal schema for Business Analyst deliverables supporting traceability, AI processing, and human readability",
+  "type": "object",
+  "required": ["metadata", "purpose", "content", "relations", "quality", "ai"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "description": "Core identification and tracking information",
+      "required": ["id", "type", "title", "owner", "status", "version", "date"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for this context block"
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of BA deliverable (e.g., 'vision', 'process', 'requirement', 'risk', 'use-case', 'stakeholder-map')"
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable title of the deliverable"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Person or team responsible for this deliverable"
+        },
+        "status": {
+          "type": "string",
+          "description": "Current state (e.g., 'draft', 'review', 'approved', 'archived')",
+          "enum": ["draft", "review", "approved", "archived"]
+        },
+        "version": {
+          "type": "string",
+          "description": "Version identifier (e.g., '1.0', '2.1')"
+        },
+        "date": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last modification date in ISO 8601 format"
+        }
+      },
+      "additionalProperties": false
+    },
+    "purpose": {
+      "type": "object",
+      "description": "Why this deliverable exists and what it aims to achieve",
+      "required": ["problemSolved", "objective"],
+      "properties": {
+        "problemSolved": {
+          "type": "string",
+          "description": "The business problem or challenge this deliverable addresses"
+        },
+        "objective": {
+          "type": "string",
+          "description": "The specific goal or outcome this deliverable aims to achieve"
+        }
+      },
+      "additionalProperties": false
+    },
+    "content": {
+      "type": "object",
+      "description": "The actual deliverable content and supporting information",
+      "required": ["structuredContent"],
+      "properties": {
+        "structuredContent": {
+          "type": "object",
+          "description": "Free-form object to hold type-specific fields (e.g., for a vision: targetGroup, needs, solution; for a requirement: functionalDescription, nfrs)"
+        },
+        "keyDecisions": {
+          "type": "array",
+          "description": "Important decisions made that shaped this deliverable",
+          "items": {
+            "type": "object",
+            "required": ["decision", "rationale"],
+            "properties": {
+              "decision": {
+                "type": "string",
+                "description": "The decision that was made"
+              },
+              "rationale": {
+                "type": "string",
+                "description": "Why this decision was made"
+              },
+              "date": {
+                "type": "string",
+                "format": "date",
+                "description": "When the decision was made"
+              }
+            }
+          }
+        },
+        "assumptions": {
+          "type": "array",
+          "description": "Assumptions underlying this deliverable",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risks": {
+          "type": "array",
+          "description": "Risks associated with this deliverable",
+          "items": {
+            "type": "object",
+            "required": ["description", "impact", "probability"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Description of the risk"
+              },
+              "impact": {
+                "type": "string",
+                "description": "Potential impact if risk occurs",
+                "enum": ["low", "medium", "high", "critical"]
+              },
+              "probability": {
+                "type": "string",
+                "description": "Likelihood of risk occurring",
+                "enum": ["low", "medium", "high"]
+              },
+              "mitigation": {
+                "type": "string",
+                "description": "How to mitigate or manage this risk"
+              }
+            }
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "relations": {
+      "type": "object",
+      "description": "Traceability links to other context blocks",
+      "properties": {
+        "informs": {
+          "type": "array",
+          "description": "IDs of context blocks that this block provides input to",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependsOn": {
+          "type": "array",
+          "description": "IDs of context blocks that this block depends on or derives from",
+          "items": {
+            "type": "string"
+          }
+        },
+        "conflictsWith": {
+          "type": "array",
+          "description": "IDs of context blocks that have conflicts or tensions with this block",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "quality": {
+      "type": "object",
+      "description": "Quality assurance and validation criteria",
+      "required": ["acceptanceCriteria", "reviewChecklist"],
+      "properties": {
+        "acceptanceCriteria": {
+          "type": "array",
+          "description": "Conditions that must be met for this deliverable to be considered complete",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewChecklist": {
+          "type": "array",
+          "description": "Checklist items for reviewing the quality of this deliverable",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ai": {
+      "type": "object",
+      "description": "AI prompts for generation and validation",
+      "required": ["generationPrompt", "validationPrompt"],
+      "properties": {
+        "generationPrompt": {
+          "type": "string",
+          "description": "Prompt that can be used to generate or regenerate this deliverable using AI"
+        },
+        "validationPrompt": {
+          "type": "string",
+          "description": "Prompt that can be used to validate the quality and completeness of this deliverable using AI"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

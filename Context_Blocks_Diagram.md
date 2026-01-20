@@ -29,6 +29,8 @@ The diagram uses these relationship types:
 - **validated_by** → Quality/correctness is verified by another block
 - **constrains** → Imposes limitations or boundaries on another block
 
+**Note:** This diagram represents a conceptual view of relationships. The current BA Context Block Schema (v1.0) implements `informs` and `dependsOn` (along with `conflictsWith`). The `validated_by` and `constrains` relationships shown here represent logical relationships that help analysts understand the complete picture of how blocks interact.
+
 ## Diagram
 
 ```mermaid

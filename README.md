@@ -6,7 +6,8 @@ This repository contains comprehensive resources for Business Analysts and Requi
 
 📊 **[BA Methods Matrix](BA_Methods_Matrix.md)** - Problem-to-method lookup guide  
 🤖 **[AI-Enabled BA Deliverables Catalog](AI_Enabled_BA_Deliverables_Catalog.md)** - Deliverables with AI acceleration techniques  
-📋 **[BA Context Block Schema 1.0](ba-context-block-schema-v1.0.json)** - Universal JSON schema for BA deliverables ([Documentation](BA_Context_Block_Schema.md))
+📋 **[BA Context Block Schema 1.0](ba-context-block-schema-v1.0.json)** - Universal JSON schema for BA deliverables ([Documentation](BA_Context_Block_Schema.md))  
+🔄 **[Context Blocks Diagram](Context_Blocks_Diagram.md)** - Visualizes relationships between all context blocks
 
 ---
 

@@ -1,4 +1,4 @@
-# Context Blocks Relationship Diagram
+# Context Blocks Relationship Diagram Concept
 
 This diagram visualizes all defined Context Blocks, their relationships to each other, and the main information flow between them.
 

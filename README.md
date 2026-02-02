@@ -2,6 +2,11 @@
 
 The goal of the repo is to explore alternative solution delivery approaches and provide agentic delivery assets.
 
+1. The most commonly used business analysis deliverables have been outlined
+2. The most commonly used ba methods have been outlined
+3. Possible agentic delivery flows and hypothesis
+
+
 ## BA Resources for Requirements Engineering
 
 This repository contains comprehensive resources for Business Analysts and Requirements Engineers:

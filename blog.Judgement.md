@@ -1,3 +1,11 @@
+Blog sessions
+1. Judgement and Ai
+2. What is context for an Agent?
+3. How is the context best leveraged in AI Aigumented software development?
+4. The BA/REs role in spec driven development?
+5. 
+
+
 if manual work is being done by agents, what is done by humans?  
 
 what are machines good at

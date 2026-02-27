@@ -31,7 +31,7 @@ Industry Context:
 [Optional – e.g., regulated industries, consulting firms, internal IT, etc.]
 
 Target Length:
-1200–1600 words
+600–1200 words
 
 === GENERATION RULES ===
 
@@ -53,6 +53,6 @@ Target Length:
    - “game changer”
    - “paradigm shift”
    - “in today’s fast-paced world”
-10. Conclude with a structured forward link.
+10. Conclude with a conclusion and structured forward link 
 
 Generate the full article. 1200–1600 words

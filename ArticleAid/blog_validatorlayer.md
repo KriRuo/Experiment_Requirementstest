@@ -7,6 +7,9 @@ Check for:
 - Overconfidence
 - Inconsistent terminology
 - Missing governance considerations
+- Weak or missing story line
+- Conflicts
+- Unlogical statements
 
 Rewrite only where necessary to correct these issues.
 Do not change structure.

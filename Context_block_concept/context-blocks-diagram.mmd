@@ -1,0 +1,62 @@
+graph LR
+    %% Core Context Blocks
+    Vision[Vision]
+    Stakeholders[Stakeholders]
+    Process[Process]
+    Requirements[Requirements]
+    Backlog[Backlog]
+    Test[Test]
+    
+    %% Cross-cutting Context Blocks
+    Risks[Risks]
+    Decisions[Decisions]
+    NFR[Non-Functional Requirements]
+    Data[Data]
+    Architecture[Architecture]
+    
+    %% Main Discovery Flow
+    Vision -->|informs| Stakeholders
+    Stakeholders -->|informs| Process
+    Process -->|informs| Requirements
+    Requirements -->|informs| Backlog
+    Backlog -->|informs| Test
+    
+    %% Vision relationships
+    Vision -->|informs| Backlog
+    Vision -->|informs| Requirements
+    
+    %% Requirements relationships
+    Requirements -->|depends_on| Stakeholders
+    Requirements -->|informs| Architecture
+    Requirements -->|validated_by| Test
+    
+    %% NFR (Non-Functional Requirements) relationships
+    NFR -->|constrains| Requirements
+    NFR -->|constrains| Architecture
+    NFR -->|validated_by| Test
+    
+    %% Data relationships
+    Data -->|informs| Requirements
+    Data -->|constrains| Architecture
+    Data -->|informs| Process
+    
+    %% Architecture relationships
+    Architecture -->|depends_on| Requirements
+    Architecture -->|validated_by| Test
+    
+    %% Risks relationships
+    Risks -->|informs| Decisions
+    Risks -->|informs| Requirements
+    Risks -->|informs| Architecture
+    
+    %% Decisions relationships
+    Decisions -->|informs| Requirements
+    Decisions -->|informs| Architecture
+    Decisions -->|informs| Backlog
+    
+    %% Test relationships
+    Test -->|depends_on| Requirements
+    Test -->|depends_on| NFR
+    
+    %% Backlog relationships
+    Backlog -->|depends_on| Requirements

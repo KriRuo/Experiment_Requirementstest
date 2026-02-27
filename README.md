@@ -1,153 +1,145 @@
 # Experiment_Requirementstest
 
-The goal of the repo is to explore alternative solution delivery approaches and provide agentic delivery assets.
-
-1. The most commonly used business analysis deliverables have been outlined
-2. The most commonly used ba methods have been outlined
-3. Possible agentic delivery flows and hypothesis
-
-## BA Resources for Requirements Engineering
-
-This repository contains comprehensive resources for Business Analysts and Requirements Engineers:
-
-📊 **[BA Methods Matrix](BA_Methods_Matrix.md)** - Problem-to-method lookup guide  
-🤖 **[AI-Enabled BA Deliverables Catalog](AI_Enabled_BA_Deliverables_Catalog.md)** - Deliverables with AI acceleration techniques  
-📋 **[BA Context Block Schema 1.0](ba-context-block-schema-v1.0.json)** - Universal JSON schema for BA deliverables ([Documentation](BA_Context_Block_Schema.md))  
-🔄 **[Context Blocks Diagram](Context_Blocks_Diagram.md)** - Visualizes relationships between all context blocks
+Exploring alternative solution delivery approaches and agentic delivery assets for Business Analysis and Requirements Engineering.
 
 ---
 
-## BA Context Block Schema 1.0
+## Repository Structure
 
-The **BA Context Block Schema 1.0** provides a standardized, universal format for any BA deliverable.
-
-📋 **[View the JSON Schema](ba-context-block-schema-v1.0.json)** | **[View Example](ba-context-block-example.json)**
-
-### What's Inside
-
-A simple and minimal JSON schema that defines a universal structure for BA deliverables including:
-
-- **Metadata** - Core identification (id, type, title, owner, status, version, date)
-- **Purpose** - Why it exists (problemSolved, objective)
-- **Content** - The actual deliverable (structuredContent, keyDecisions, assumptions, risks)
-- **Relations** - Traceability links (informs, dependsOn, conflictsWith)
-- **Quality** - Validation criteria (acceptanceCriteria, reviewChecklist)
-- **AI** - AI prompts (generationPrompt, validationPrompt)
-
-### Key Features
-
-✅ Works for any BA deliverable type (vision, process, requirements, risks, use cases, etc.)  
-✅ Human-readable and easy to understand  
-✅ Deterministic for AI processing and automation  
-✅ Supports full traceability between blocks  
-✅ Under 40 total fields (33 fields)  
-✅ Clear descriptions for all fields  
-✅ No optional complexity (no inheritance, no advanced refs)
-
-### Use Cases
-
-- **Universal Storage Format** - Store any BA deliverable in a consistent structure
-- **Traceability Management** - Track dependencies and relationships between deliverables
-- **AI-Powered Generation** - Use stored prompts to regenerate or update deliverables
-- **Quality Validation** - Automated checking against acceptance criteria and checklists
-- **Tool Integration** - Standard format for BA tool interoperability
+```text
+├── BAstuff/                    # Core BA reference materials
+├── Context_block_concept/      # Context Block schema and concept definition
+├── Context_block_examples/     # Filled-in Context Block examples
+├── Context_blocks_templates/   # Blank Context Block templates (17 types)
+├── Blogposts/                  # Blog articles (published and in-progress)
+├── ArticleAid/                 # Blog writing support and authoring tools
+└── SWDocu_templates/           # Software documentation templates
+```
 
 ---
 
-## BA Methods Matrix
+## BAstuff — Core BA Resources
 
-The **BA Methods Matrix** helps practitioners quickly identify the right method for their situation.
+Reference materials for Business Analysts and Requirements Engineers.
 
-📊 **[View the BA Methods Matrix](BA_Methods_Matrix.md)**
-
-### What's Inside
-
-The matrix provides a structured lookup table that maps:
-- **Problem/Situation** → The challenge you're facing
-- **BA Method** → The technique that solves it
-- **Short Description** → What the method does
-- **Key Steps** → How to execute it (3-6 actionable steps)
-- **Goal** → What you'll achieve
-- **Deliverable** → The concrete artifact you'll produce
-
-### Coverage
-
-The matrix covers 38+ problem scenarios including:
-- Vision and strategy alignment
-- Stakeholder management
-- Requirements elicitation and clarity
-- Prioritization and decision-making
-- Process modeling and optimization
-- Architecture and integration
-- Quality and non-functional requirements
-- Validation and testing
-- Data modeling
-- Business case development
-- Change and risk management
-
-### Standards Supported
-
-- IREB (International Requirements Engineering Board)
-- BABOK (Business Analysis Body of Knowledge)
-- Agile/Scrum practices
-- SAFe (Scaled Agile Framework)
-- Lean/Six Sigma principles
-- UX/Design Thinking methods
+| File | Description |
+| ---- | ----------- |
+| [BA_Methods_Matrix.md](BAstuff/BA_Methods_Matrix.md) | Problem-to-method lookup: 38+ scenarios mapped to BA techniques |
+| [AI_Enabled_BA_Deliverables_Catalog.md](BAstuff/AI_Enabled_BA_Deliverables_Catalog.md) | 16 BA deliverables with AI acceleration prompts and patterns |
+| [BA_Deliverables_Matrix.md](BAstuff/BA_Deliverables_Matrix.md) | Deliverables overview matrix |
+| [BA_New_Joiner_Guide.md](BAstuff/BA_New_Joiner_Guide.md) | Quick-start guide for BAs joining a new project |
+| [BA_Context_Block_Schema.md](BAstuff/BA_Context_Block_Schema.md) | Documentation for the Context Block Schema v1.0 |
+| [Context_Blocks_Diagram.md](BAstuff/Context_Blocks_Diagram.md) | Visualizes relationships between all Context Block types |
+| [CDM_BrownBag_series.md](BAstuff/CDM_BrownBag_series.md) | CDM brown-bag session content |
 
 ---
 
-## AI-Enabled BA Deliverables Catalog
+## Context Block Concept
 
-The **AI-Enabled BA Deliverables Catalog** provides detailed guidance on creating and accelerating BA deliverables using modern AI techniques.
+The **Context Block Schema v1.0** is a standardized, universal JSON format for any BA deliverable — designed to be both human-readable and deterministic for AI processing.
 
-🤖 **[View the AI-Enabled Deliverables Catalog](AI_Enabled_BA_Deliverables_Catalog.md)**
+| File | Description |
+| ---- | ----------- |
+| [ba-context-block-schema-v1.0.json](Context_block_concept/ba-context-block-schema-v1.0.json) | The JSON schema (source of truth) |
+| [ba-context-block-example.json](Context_block_concept/ba-context-block-example.json) | Filled-in example of the schema |
+| [BA_Context_Block_Schema.md](Context_block_concept/BA_Context_Block_Schema.md) | Schema field documentation |
+| [Context_Blocks_Diagram.md](Context_block_concept/Context_Blocks_Diagram.md) | Relationship diagram between block types |
 
-### What's Inside
+### Schema at a Glance
 
-A comprehensive catalog of 16 essential BA deliverables, each with:
-- **Problem(s) Solved** - What challenges this deliverable addresses
-- **Description & Purpose** - Clear explanation of the artifact
-- **Core Components** - What must be included
-- **Quality Criteria** - Standards for "good" deliverables
-- **Typical Inputs & Consumers** - Source materials and stakeholders
-- **Format Examples** - Common templates and tools
-- **AI Acceleration** - Concrete prompts, automations, and validations (minimum 3 per deliverable)
-- **Typical Mistakes** - Common pitfalls to avoid
-- **Review Checklist** - 3-5 item quality check
-- **When NOT to Use** - Situations where this artifact isn't appropriate
+A minimal JSON structure (33 fields) covering:
 
-### Deliverables Covered
+- **Metadata** — id, type, title, owner, status, version, date
+- **Purpose** — problemSolved, objective
+- **Content** — structuredContent, keyDecisions, assumptions, risks
+- **Relations** — informs, dependsOn, conflictsWith
+- **Quality** — acceptanceCriteria, reviewChecklist
+- **AI** — generationPrompt, validationPrompt
 
-1. Vision Canvas
-2. Stakeholder Map
-3. Context Diagram
-4. BPMN Process Model
-5. User Story Map
-6. Product Backlog
-7. Use Case Specification
-8. Data Model
-9. NFR Catalog
-10. Acceptance Criteria
-11. Prototype / Wireframe
-12. Impact Analysis
-13. Business Case
-14. Definition of Ready
-15. Test Concept
-16. Release Plan
-
-### AI Acceleration Patterns
-
-The catalog includes executable AI techniques such as:
-- ✨ **Generate X from Y** - Draft creation from source materials
-- ✅ **Review for gaps** - Quality validation against checklists
-- 📝 **Meeting notes → artifacts** - Extract deliverables from transcripts
-- 📊 **Text → diagrams** - Generate Mermaid/BPMN visualizations
-- 🔗 **Consistency checks** - Cross-artifact validation
-- 🧪 **Test generation** - From requirements to test cases
-- 🎯 **Traceability** - Link requirements to implementation
+Works for any BA deliverable type. Supports full traceability. Deterministic for AI automation.
 
 ---
 
-**Quick Start**: 
-- Need a method? Open [BA_Methods_Matrix.md](BA_Methods_Matrix.md) and search for your problem situation
-- Creating a deliverable? Open [AI_Enabled_BA_Deliverables_Catalog.md](AI_Enabled_BA_Deliverables_Catalog.md) and find your artifact with AI prompts
+## Context Block Examples
+
+Filled-in Context Block files showing the schema applied to real deliverable types.
+
+| File | Deliverable Type |
+| ---- | ---------------- |
+| [CB_vIsion_canvas_example_v1.md](Context_block_examples/CB_vIsion_canvas_example_v1.md) | Vision Canvas |
+| [CB_stakeholder_map_example_v1.md](Context_block_examples/CB_stakeholder_map_example_v1.md) | Stakeholder Map |
+| [CB_context_diagram_example_v1.md](Context_block_examples/CB_context_diagram_example_v1.md) | Context Diagram |
+| [CB_bpmn_process_example_v1.md](Context_block_examples/CB_bpmn_process_example_v1.md) | BPMN Process Model |
+| [CB_user_story_map_example_v1.md](Context_block_examples/CB_user_story_map_example_v1.md) | User Story Map |
+| [CB_product_backlog_example_v1.md](Context_block_examples/CB_product_backlog_example_v1.md) | Product Backlog |
+| [CB_use_case_example_v1.md](Context_block_examples/CB_use_case_example_v1.md) | Use Case Specification |
+| [CB_backlog_item_example_v1.md](Context_block_examples/CB_backlog_item_example_v1.md) | Backlog Item |
+
+---
+
+## Context Block Templates
+
+Blank templates for all 17 supported deliverable types — ready to fill in.
+
+| Template | Deliverable |
+| -------- | ----------- |
+| [CB_vision_canvas_template_v1.md](Context_blocks_templates/CB_vision_canvas_template_v1.md) | Vision Canvas |
+| [CB_stakeholder_map_template_v1.md](Context_blocks_templates/CB_stakeholder_map_template_v1.md) | Stakeholder Map |
+| [CB_context_diagram_template_v1.md](Context_blocks_templates/CB_context_diagram_template_v1.md) | Context Diagram |
+| [CB_bpmn_process_template_v1.md](Context_blocks_templates/CB_bpmn_process_template_v1.md) | BPMN Process Model |
+| [CB_user_story_map_template_v1.md](Context_blocks_templates/CB_user_story_map_template_v1.md) | User Story Map |
+| [CB_product_backlog_template_v1.md](Context_blocks_templates/CB_product_backlog_template_v1.md) | Product Backlog |
+| [CB_backlog_item_template_v1.md](Context_blocks_templates/CB_backlog_item_template_v1.md) | Backlog Item |
+| [CB_use_case_template_v1.md](Context_blocks_templates/CB_use_case_template_v1.md) | Use Case Specification |
+| [CB_data_model_template_v1.md](Context_blocks_templates/CB_data_model_template_v1.md) | Data Model |
+| [CB_nfr_catalog_template_v1.md](Context_blocks_templates/CB_nfr_catalog_template_v1.md) | NFR Catalog |
+| [CB_acceptance_criteria_template_v1.md](Context_blocks_templates/CB_acceptance_criteria_template_v1.md) | Acceptance Criteria |
+| [CB_prototype_template_v1.md](Context_blocks_templates/CB_prototype_template_v1.md) | Prototype / Wireframe |
+| [CB_impact_analysis_template_v1.md](Context_blocks_templates/CB_impact_analysis_template_v1.md) | Impact Analysis |
+| [CB_business_case_template_v1.md](Context_blocks_templates/CB_business_case_template_v1.md) | Business Case |
+| [CB_definition_of_ready_template_v1.md](Context_blocks_templates/CB_definition_of_ready_template_v1.md) | Definition of Ready |
+| [CB_test_concept_template_v1.md](Context_blocks_templates/CB_test_concept_template_v1.md) | Test Concept |
+| [CB_release_plan_template_v1.md](Context_blocks_templates/CB_release_plan_template_v1.md) | Release Plan |
+
+---
+
+## Blogposts
+
+Articles exploring AI-augmented delivery and the evolving BA/RE role.
+
+| File | Topic |
+| ---- | ----- |
+| [Blog_Judgement_and_AI.md](Blogposts/Blog_Judgement_and_AI.md) | Judgement and AI |
+| [Blog_Judgement_and_AI_V2.md](Blogposts/Blog_Judgement_and_AI_V2.md) | Judgement and AI (revised) |
+| [Blog_Agent_augumented_delivery.md](Blogposts/Blog_Agent_augumented_delivery.md) | Agent-augmented delivery |
+| [blog_backlog.md](Blogposts/blog_backlog.md) | Planned topics backlog |
+
+---
+
+## ArticleAid — Blog Writing Tools
+
+Support materials for authoring the blog series.
+
+| File | Purpose |
+| ---- | ------- |
+| [blog_series_manifesto.md](ArticleAid/blog_series_manifesto.md) | Series framing and editorial direction |
+| [blog_article_template.md](ArticleAid/blog_article_template.md) | Reusable article structure template |
+| [blog_author_profile.md](ArticleAid/blog_author_profile.md) | Author bio and positioning |
+| [blog_master_prompt.md](ArticleAid/blog_master_prompt.md) | Master AI prompt for article generation |
+| [blog_validatorlayer.md](ArticleAid/blog_validatorlayer.md) | Quality validator for blog output |
+
+---
+
+## Quick Start
+
+**Working with BA methods?**
+Open [BAstuff/BA_Methods_Matrix.md](BAstuff/BA_Methods_Matrix.md) and search for your problem situation.
+
+**Creating a deliverable?**
+Open [BAstuff/AI_Enabled_BA_Deliverables_Catalog.md](BAstuff/AI_Enabled_BA_Deliverables_Catalog.md) and find your artifact with AI prompts.
+
+**Using Context Blocks?**
+Start with [Context_block_concept/ba-context-block-schema-v1.0.json](Context_block_concept/ba-context-block-schema-v1.0.json), pick a template from [Context_blocks_templates/](Context_blocks_templates/), and see a filled-in example in [Context_block_examples/](Context_block_examples/).
+
+**New to the project as a BA?**
+Read [BAstuff/BA_New_Joiner_Guide.md](BAstuff/BA_New_Joiner_Guide.md) first.
